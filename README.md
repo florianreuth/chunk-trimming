@@ -23,7 +23,7 @@ set.
 
 ## Links
 
-- Modrinth: https://modrinth.com/mod/chunk-trimming
+- Modrinth: https://modrinth.com/plugin/chunk-trimming
 - Hangar: https://hangar.papermc.io/EnZaXD/chunk-trimming
 - Dev builds: https://build.florianreuth.de/job/chunk-trimming
 
