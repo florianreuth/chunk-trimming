@@ -21,6 +21,7 @@ package de.florianreuth.chunktrimming.listener;
 import de.florianreuth.chunktrimming.configuration.TrimmingBehavior;
 import de.florianreuth.chunktrimming.service.ChunkTrackingService;
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -91,13 +92,18 @@ public final class PlayerActivityListener implements Listener {
     }
 
     private void markAround(final Location location) {
+        final World world = location.getWorld();
+        if (world == null) {
+            return;
+        }
+
         final int radius = this.behavior.saveRadius();
         final int chunkX = location.getBlockX() >> 4;
         final int chunkZ = location.getBlockZ() >> 4;
 
         for (int offsetX = -radius; offsetX <= radius; offsetX++) {
             for (int offsetZ = -radius; offsetZ <= radius; offsetZ++) {
-                this.service.markVisited(location.getWorld(), chunkX + offsetX, chunkZ + offsetZ);
+                this.service.markVisited(world, chunkX + offsetX, chunkZ + offsetZ);
             }
         }
     }
