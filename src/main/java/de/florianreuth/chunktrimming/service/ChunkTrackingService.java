@@ -1,6 +1,6 @@
 /*
  * This file is part of chunk-trimming - https://github.com/florianreuth/chunk-trimming
- * Copyright (C) 2026 Florian Reuth <git@florianreuth.de> and contributors
+ * Copyright (C) 2026 Florian Reuth <git@florianreuth.de>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
